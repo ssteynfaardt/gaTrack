@@ -3,8 +3,13 @@
 jQuery plugin for Google Analytics Event Tracking
 
 Track events using data elements
-```
-<a data-category="Downloads" data-action="Left Click" data-label="Monthly Statement" href="monthly.csv" class="track">Download Monthly Statement</a>
+```html
+<a  data-category="Downloads" 
+    data-action="Left Click" 
+    data-label="Monthly Statement" 
+    href="monthly.csv">
+    Download Monthly Statement
+</a>
 ```
 #Example code
 If we have the following HTML
