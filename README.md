@@ -39,7 +39,7 @@ Now when we click on the links the following data will be tracked
 |Name |Description |Default
 |---|---|---
 |**category**|For event tracking, a category is a name that you supply as a way to group objects that you want to track.| The current  page title.
-|**action** | Use the action parameter to name the type of event or interaction you want to track for a particular web object. (e.g. ‘click,’ ‘download,’ ‘play,’ etc) | Clicked
+|**action** | Use the action parameter to name the type of event or interaction you want to track for a particular web object. (e.g. ‘click,’ ‘download,’ ‘play,’ etc) | Click
 |**label** | With labels you can provide additional information for events that you want to track. (e.g. video title or the name of a file)|The element's ID attribute value
 |**value** | An integer that you can use to provide numerical data about the user event.|
 |**noninteraction** | A boolean that when set to `true`, indicates that the event hit will not be used in bounce-rate calculation.|
