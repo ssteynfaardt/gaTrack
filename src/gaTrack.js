@@ -22,22 +22,19 @@
       data_value : "value",
       data_noninteraction : "noninteraction",
     }, options);
-
-    this.click(function(){
+    //make sure we support touch devices
+    var touchEvent = 'mouseup';
+    if("ontouchend" in document){
+      touchEvent = 'touchend';
+    }
+    this.bind(touchEvent,function(){
       var category = $(this).data(settings.data_category) || settings.category || "Links",
           action = $(this).data(settings.data_action) || settings.action,
-          label = $(this).data(settings.data_label) || $(this).attr('id') || settings.label,
+          label = $(this).data(settings.data_label) || $(this).attr('id') || settings.label || $(this).text().trim(),
           value = $(this).data(settings.data_value) || settings.value,
           noninteraction = $(this).data(settings.data_noninteraction) || settings.noninteraction;
       _gaq.push(['_trackEvent', category, action,label,value,noninteraction]);
     });
-
   };
 
 }(jQuery));
-
-
-var a = {
-  "category" : "External Links",
-  "action" : "Clicked",
-};
