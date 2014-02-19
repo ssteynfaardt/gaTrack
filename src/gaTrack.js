@@ -11,7 +11,7 @@
   $.fn.gaTrack = function( options ) {
     // setup default settings
     var settings = $.extend({
-      category : $('title').text().trim(),
+      category : $.trim($('title').text()),
       action : "Click",
       label : null,
       value : null,
@@ -30,7 +30,7 @@
     this.bind(touchEvent,function(){
       var category = $(this).data(settings.data_category) || settings.category || "Links",
           action = $(this).data(settings.data_action) || settings.action,
-          label = $(this).data(settings.data_label) || $(this).attr('id') || settings.label || $(this).text().trim(),
+          label = $(this).data(settings.data_label) || $(this).attr('id') || settings.label || $.trim($(this).text()),
           value = $(this).data(settings.data_value) || settings.value,
           noninteraction = $(this).data(settings.data_noninteraction) || settings.noninteraction;
       _gaq.push(['_trackEvent', category, action,label,value,noninteraction]);
